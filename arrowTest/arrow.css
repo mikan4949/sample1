@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding:0;
+    list-style-type: none;
+}
+ul{
+    width:200px;
+    border-top: 1px solid #CCC;
+}
+li{
+    height:30px;
+    border-bottom: 1px solid #CCC;
+}
+li a{
+    height:30px;
+    line-height: 30px;
+    display: block;
+    font-size: 1.1em;
+    color:#333;
+    text-decoration: none;
+}
+
+/*- 矢印型マーカーセット -*/
+li a.arrow{
+    position: relative;
+}
+li a.arrow::before{
+    content:"";
+    display: inline-block;
+    width:7px;
+    height:7px;
+    border-top:3px solid #333;
+    border-right:3px solid #333;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    left:0px;
+    margin-right: 10px;
+}
+
+
+/*- 三角型マーカーセット -*/
+li a.tri{
+    position: relative;
+    padding-left: 20px;
+}
+li a.tri::before{
+    content: "";
+    border: transparent solid 5px;
+    border-left-color: #000000;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    height: 0;
+    width: 0;
+    margin: 0px;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+
+
